@@ -1,0 +1,601 @@
+/* Global */
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+  }
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+  }
+  body{
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  /* end */
+  /* HEADER */
+  .myHeader {
+      position: fixed;
+      width: 100%;
+      z-index: 3;
+     font-weight: bold;
+     background-color: #4F2B85;
+     color:white;
+     height: 80px;
+     transition: all 1s;
+     /* thay doi tat ca thuoc tinh cham lai 1s  */
+    }
+   .myHeadercontent {
+    align-items: center;
+    /* canh giua cac the duoc ho tro boi position flex */
+    display: flex;
+    justify-content: space-between; 
+    /* canh deu khoang cach cua cac dive */
+    width:50%; 
+    margin: 0 auto;
+    padding: 20px 0;
+
+  }
+  
+  .myHeader .myHeadercontent .menu ul{
+    
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+  }
+  .myHeader .myHeadercontent .menu ul li a{
+      
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      transition: color 1s;
+  }
+  .myHeader .myHeadercontent .menu ul li a.active{
+    color:#FF1083;
+  }
+  .myHeader .myHeadercontent .menu ul li:hover a{
+    color: #FF1083;
+    
+
+  }
+  /* khi thu nho man hinh toi nho hon 1200px thi se ap dung nhung css nay vao */
+  @media screen and (max-width :1200px){
+    .myHeadercontent{
+      width:100%;
+    }
+  }
+/* end */
+
+/* COVER */
+.myCover{
+  display: flex;
+  background-image: url("../img/b3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:500px;
+  text-align: center;
+  align-items: center;
+  
+}
+.myCover_content{
+  margin:0 auto;
+  color: white;
+  
+}
+.myCover_content h1{
+  font-size: 60px;
+  
+}
+.myCover_content p{
+  margin: 30px 0;
+}
+.btn{
+color: white;
+background-color: #FF1083;
+border:  1px solid white;
+padding: 10px 30px;
+font-size: 20px;
+border-radius: 5px;
+
+}
+.btn:hover{
+  color: black;
+background-color: white;
+border:  1px solid #FF1083;
+padding: 10px 30px;
+font-size: 20px;
+border-radius: 5px;
+}
+
+@media screen and (max-width :768px){
+  .myCover_content h1{
+    font-size: 30px;
+    
+  }
+  }
+/* end */
+/* Clear */
+.clear{
+  clear: both;
+}
+/* end clear */
+/* Intro */
+.myIntro{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+   /* chia so cot */
+  /* grid-template-rows: auto auto auto; */
+ /* chia so hang theo chieu cao full theo content */
+
+}
+.myIntro img{
+width:100%;
+height:100%;
+display:block;
+}
+.intro_img{
+  grid-column: 2/4;
+  
+}
+
+.intro_item{
+  display: flex;
+  align-items: center;
+  margin:0 auto;
+  text-align:center;
+  color: white;
+  
+}
+.intro_tradition {
+  background-color: #4F2B85;
+  padding: 0 40px;
+}
+.intro_creativity{
+  background-color: #FF0E83;
+  padding: 0 40px;
+  
+}
+.intro_item_content h1{
+  margin-bottom: 20px;
+  
+}
+.intro_item_content p{
+opacity: 0.8;
+line-height: 15px;
+}
+
+.intro_what{
+  background-color: #ED6498;
+  padding: 0 40px;
+  grid-column: 1/3;
+}
+.intro_quality{
+  background-color: #836EAA;
+  padding: 0 40px;
+}
+.intro_tasty{
+  background-color: #4F2B85;
+  padding: 0 40px;
+}
+.intro_img4{
+  grid-column: 3/5;
+}
+
+
+@media screen and (max-width :768px){
+  .myIntro{
+    display: block;
+   
+  }
+    
+    
+  }
+}
+/* End Intro */
+
+/* statictis */
+.statictis{
+  padding-top:100px;
+  height:300px;
+}
+.statictis_content{
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
+  width:70%;
+  height:100px;
+  margin: 0 auto;
+}
+.statictis_item{
+  text-align: center;
+  align-items: center;
+ 
+}
+.statictis p{
+font-size: 30px;
+color:#4F2B85;
+margin-bottom: 10px;
+font-weight: 600;
+border: #4F2B85;
+}
+.statictis h4{
+  font-size: 25px;
+  line-height: 5px;
+}
+@media screen and (max-width:800px){
+  .statictis_item{
+    width:50%;
+  }
+}
+
+
+
+/* end statictis */
+
+/* service */
+.service_content{
+  background-image: url("../img/s1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+ 
+  
+
+}
+
+.service_title{
+  padding-top: 20px;
+  margin:0 auto;
+  color: white;
+  text-align: center;
+}
+.service_title h3{
+  font-size: 50px;
+}
+.service_content_item{
+  padding-top: 80px;
+  display: flex;
+  width:80%;
+  align-items: center;
+  margin:0 auto;
+  
+}
+.service_item{
+  align-items: center;
+  text-align: center;
+  
+
+}
+
+.service_span{
+  background-color: white;
+  border: 1px solid #4F2B85;
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  padding: 5%; 
+  margin: 0 auto;
+  margin-bottom: 25px;
+  color: #4F2B85;
+  
+
+}
+.service_item:hover span{
+  
+  color: #FF0E83;
+}
+.service_item h4 {
+margin-bottom: 25px;
+font-size: 25px;
+}
+.service_item .btn{
+  transition: all 1s;
+
+}
+.service_item p{
+  margin-bottom: 25px;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+.service_span span{
+  font-size: 60px;
+  transition: all 1s;
+}
+@media screen and (max-width:900px){
+  .service_content{
+    
+    
+  }
+  .service_item{
+    width:50%;
+    margin-bottom: 10px;
+  }
+  .service_content_item{
+    flex-wrap: wrap;
+  }
+}
+
+/* end service */
+
+/* gallery */
+.gallery_content h1{
+  animation: Fadeup 3s infinite;
+}
+
+.gallery_content{
+  font-size: 40px;
+  text-align: center;
+  margin: 20px 0;
+}
+.gallery_content .galley_item {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  width:98%;
+  grid-column-gap:  30px;
+  grid-row-gap: 30px;
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  /* de cho no su dung dc tren IE10 */
+}
+.gallery_content img{
+  width:100%;
+  height: 100%;
+}
+.drop1{
+  grid-column: 1/span 2;
+  /* 2 dong duoi danh cho IE10 cai dau la diem bat dau cai sau la so o su dung */
+ -ms-grid-column: 1;
+ -ms-grid-column-span: 2;
+ -ms-grid-row:1;
+ -ms-grid-row-span: 1;
+
+}
+.drop6{
+  grid-column: 3/span 2;
+}
+.gallery_content .gallary_drop{
+position: relative;
+}
+.gallary_drop .item_title{
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50px;
+  left:20%;
+  text-align: right;
+  color: white;
+}
+.item_title .underline{
+  width:100%;
+  height:5px;
+  background-color: white;
+  position: absolute;
+  top:100px;
+  opacity: 0;
+  right:10%;
+}
+.item_title p:first-child{
+  font-size:30px;
+  position: absolute;
+  top:30px;
+  right:10%;
+}
+.item_title p:first-child span{
+  font-weight: bold;
+}
+.item_title p:last-child{
+  opacity: 0;
+  position: absolute;
+  font-size: 10px;
+  bottom: 0;
+  right:10%;
+}
+.drop1:hover  .item_title p:first-child{
+  transition: all 1s;
+  top:0;
+}
+.drop1:hover .item_title .underline{
+  top:15%;
+  transition: all 1s;
+  opacity:1;
+
+}
+.drop1:hover  .item_title p:last-child{
+  bottom: 10%;
+  transition: all 1s;
+  opacity:1;
+}
+
+/* end gallery */
+
+/* team */
+.myTeam{
+background-color: #4F2B85;
+margin-top: 30px;
+padding: 30px 20px;
+}
+.myTeam .myTeam_title{
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+.myTeam_person{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  width:80%;
+  margin:  auto;
+
+}
+.myTeam_item img{
+  width:100%;
+  height: 100%;
+  display: block;
+  
+}
+.myTeam_item{
+  position: relative;
+}
+.item_content{
+  position: absolute;
+  bottom: 0;
+  background-color: #FF0E83;
+  color: white;
+  width: 100%;
+  padding: 30px;
+}
+.overlay{
+  display: none;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width:100%;
+  height: 100%;
+  color: white;
+  padding:70px 40px;
+}
+.overlay h4{
+  color: #FF0E83;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.overlay p:nth-child(2){
+  margin-bottom: 20px;
+
+}
+.overlay p:nth-child(3){
+line-height: 30px;
+margin-bottom: 20px;
+}
+.button_social{
+  display: flex;
+}
+.btn_item{
+  border: 1px solid white;
+text-align: center;
+
+  margin-right: 10px;
+  height: 40px;
+  width:40px;
+}
+.btn_item i{
+  line-height: 40px;
+}
+.btn_item a{
+  color: white;
+}
+.btn_item:hover{
+  border-color: #FF0E83;
+
+}
+.btn_item:hover a{
+  color: #FF0E83;
+}
+.myTeam_item:hover .item_content{
+display: none;
+}
+.myTeam_item:hover .overlay{
+  display: block;
+  }
+/* end team */
+
+/* testiminal */
+.testimonial{
+  background-image: url("../img/cc1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0 ;
+}
+.testimonial h1{
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+.testi_content {
+  width: 80%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 5px solid #FF0E83;
+  padding: 20px 40px;
+  text-align: center;
+}
+.testi_content p{
+  margin-bottom: 10px;
+}
+.testi_content p:nth-child(2){
+  color: white;
+  font-size: 30px;
+}
+.testi_content i{
+  color: rgb(35, 202, 124);
+  font-size: 30px;
+  margin: 0 20px;
+  font-weight: bold;
+
+}
+/* end testiminal */
+
+/* Contact */
+.myContact h3{
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+.form_contact{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width:80%;
+  margin:  auto;
+}
+.contact_text input{
+  width: 100%; 
+  height:50px;
+  padding:10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  
+} 
+.contact_textare textarea{
+  width:100%;
+  padding:10px;
+  border: 1px solid black;
+  font-size: 20px;
+  color: black;
+}
+.contact_textare{
+  grid-column: 1/span 2;
+}
+.contact_textare button{
+  width: 100%;
+  height:40px;
+  color: black;
+  background-color: #FF0E83;
+  font-size: 15px;
+  font-weight: bold;
+}
+.contact_btn:hover {
+  color: white;
+  background-color: black;
+}
+
+
+/* end Contact */
+/* tu tao animation */
+@keyframes Fadeup{
+  0%{
+    transform: translateX(-100px) translateY(-50px);
+    opacity: 0;
+    }
+100%{
+    transform: rotate(xx) translateX(0) translateY(0);
+    opacity: 1;
+    }
+}
